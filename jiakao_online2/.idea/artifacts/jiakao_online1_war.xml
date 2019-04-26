@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jiakao_online1:war">
+    <output-path>$PROJECT_DIR$/../jiakao_online1/target</output-path>
+    <root id="archive" name="jiakao_online1-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jiakao_online1:war exploded" />
+    </root>
+  </artifact>
+</component>
