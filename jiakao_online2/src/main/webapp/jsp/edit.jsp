@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/easyui/themes/icon.css">
 <script type="text/javascript"
-	src="${pageContext.request.contextPath }/easyui/jquery.min.js"></script>
+	src="${pageContext.request.contextPath }/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"
@@ -70,7 +70,7 @@
 </head>
 <body>
 <div style="line-height:80px;height:80px;background-image:url('${pageContext.request.contextPath}/image/signinback.jpg');background-size:cover">
-	<font color="white" size="10" face="仿宋" style="font-weight:bold;margin-left:2%">营 养 在 线 考 试 网</font>
+	<font color="white" size="10" face="仿宋" style="font-weight:bold;margin-left:2%">驾 校 在 线 考 试 网</font>
 	<font id="ft" style="margin-left:40%">当 前 考 生：<span id="sp">${sessionScope.studentName }</span></font>
 </div>
 <div style="margin-top:2%;margin-left:2%">

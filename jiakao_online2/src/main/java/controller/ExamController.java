@@ -77,17 +77,21 @@ public class ExamController {
 		while(it.hasNext()) {
 			Integer key=it.next();
 			String value=map.get(key);
-			
+			String value1 = value.replace(",","");
+			System.out.println("------------------");
+			System.out.println(key);
+			System.out.println(value1);
 			Questions questions = questionsService.findById(key);
 			if(taotiId == null) {
 				taotiId=questions.getTaotiid();
 			}
 			if(questions.getType().equals("多选")) {
-				if(questions.getAnswer().equals(value)) {
+
+				if(questions.getAnswer().equals(value1)) {
 					doubleGrade+=1;
 				}
 			}else {
-				if(questions.getAnswer().equals(value)) {
+				if(questions.getAnswer().equals(value1)) {
 					singleGrade+=1;
 				}
 			}

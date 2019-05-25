@@ -6,6 +6,8 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.servlet.ServletUtilities;
+import org.jfree.chart.title.LegendTitle;
+import org.jfree.chart.title.TextTitle;
 import org.jfree.data.general.DefaultPieDataset;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -60,18 +62,27 @@ public class ResultController {
 		modelAndView.setViewName("/examResultAll");
 		modelAndView.addObject("resultList", list);
 		
-		Integer mathTotal = resultService.getTotalByLessonnName("数学", list);
-		Integer chineseTotal = resultService.getTotalByLessonnName("语文", list);
-		Integer englishTotal = resultService.getTotalByLessonnName("英语", list);
+		Integer oneTotal = resultService.getTotalByLessonnName("科一", list);
+		Integer fourTotal = resultService.getTotalByLessonnName("科四", list);
 		DefaultPieDataset dataset=new DefaultPieDataset();
-		dataset.setValue("数学",mathTotal);
-		dataset.setValue("语文",chineseTotal);
-		dataset.setValue("英语",englishTotal);
-		JFreeChart pieChart = ChartFactory.createPieChart("您的擅长学科分析图", dataset, true, true, true);
-		
+		dataset.setValue("科一",oneTotal);
+		dataset.setValue("科四",fourTotal);
+
+
+		JFreeChart pieChart = ChartFactory.createPieChart("您的擅长学科分析图",dataset, true, true, true);
+
+
+
+
+
 		PiePlot plot=(PiePlot) pieChart.getPlot();
 		//设置显示数值，并设置字体样式
 		plot.setLabelFont(new Font("微软雅黑", 2, 12));
+		TextTitle textTitle = pieChart.getTitle();
+		textTitle.setFont(new Font("宋体", Font.ITALIC, 25));
+		LegendTitle legendTitle = pieChart.getLegend();
+		legendTitle.setItemFont(new Font("宋体", Font.BOLD+Font.ITALIC, 15));
+
 		//设置饼状图是圆的（true），还是椭圆（false），默认为true
 		plot.setCircular(true);
 		//设置没有数据的时候显示的内容

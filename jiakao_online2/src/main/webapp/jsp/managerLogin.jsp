@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/easyui/themes/icon.css">
 <script type="text/javascript"
-	src="${pageContext.request.contextPath }/easyui/jquery.min.js"></script>
+	src="${pageContext.request.contextPath }/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"
@@ -19,18 +19,18 @@
 	
 </head>
 <body style="background-image:url('${pageContext.request.contextPath}/image/managerLogin.jpg');background-size:cover">
-	<div style="text-align:center;margin-top:10%">
-		<font face="仿宋" size="10">管 理 员 登 录</font>
-	</div>
+<div style="text-align:center;margin-top:12%">
+	<font face="仿宋" size="10" color="white">管 理 员 登 录</font>
+</div>
 	<div style="margin-top:3%;margin-left:40%">
 		<form action="${pageContext.request.contextPath }/managerLogin.action" method="post">
 			<table cellpadding="10px">
 				<tr>
-					<td><font>帐&nbsp;号</font></td>
+					<td><font color="#E8FFF5">帐&nbsp;号</font></td>
 					<td><input class="easyui-textbox" data-options="iconCls:'icon-man'" name="name"></td>
 				</tr>
 				<tr>
-					<td><font>密&nbsp;码</font></td>
+					<td><font color="#E8FFF5">密&nbsp;码</font></td>
 					<td><input class="easyui-passwordbox" name="password"></td>
 				</tr>
 				<tr>

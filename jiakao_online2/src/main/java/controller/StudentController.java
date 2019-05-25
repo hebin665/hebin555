@@ -65,7 +65,7 @@ public class StudentController {
 	@RequestMapping("/logout.action")
 	public String logout(HttpSession session) throws Exception{
 		session.invalidate();
-		return "redirect:/jsp/choice.jsp";
+		return "redirect:/jsp/login.jsp";
 	}
 	
 	@RequestMapping("/toEdit.action")
@@ -102,6 +102,7 @@ public class StudentController {
 	@RequestMapping("/managerDeleteStudent.action")
 	public @ResponseBody String managerDeleteStudent(@RequestBody String idsStr) throws Exception{
 		String[] ids = idsStr.split(",");
+		System.out.println(ids);
 		for (int i = 0; i < ids.length; i++) {
 			studentService.deleteOneById(Integer.parseInt(ids[i]));
 		}

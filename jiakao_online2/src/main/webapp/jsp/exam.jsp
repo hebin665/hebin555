@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/easyui/themes/icon.css">
 <script type="text/javascript"
-	src="${pageContext.request.contextPath }/easyui/jquery.min.js"></script>
+	src="${pageContext.request.contextPath }/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"
@@ -39,7 +39,8 @@
 	})
 </script>
 </head>
-<body>
+<body style="background-image:url('${pageContext.request.contextPath}/image/blue.jpg');background-size:cover">
+
 <div style="line-height:80px;height:80px;background-image:url('${pageContext.request.contextPath}/image/signinback.jpg');background-size:cover">
 	<font color="white" size="10" face="仿宋" style="font-weight:bold;margin-left:2%">驾 校 在 线 考 试 系 统</font>
 	<font id="ft" style="margin-left:20%">当 前 考 生：<span id="sp">${sessionScope.studentName }</span></font>
